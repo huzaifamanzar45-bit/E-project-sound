@@ -26,7 +26,7 @@
                             <li>
                                 <i class="fa fa-envelope"></i>
                                 <h5>Email</h5>
-                                <p>contact@beatx.com</p>
+                                <p>soundsupport@gmail.com</p>
                             </li>
                         </ul>
                     </div>

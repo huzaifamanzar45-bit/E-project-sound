@@ -3567,3 +3567,694 @@ body{
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 }
+/* =====================================
+   SOUND HEADER
+===================================== */
+
+.sound-header {
+    height: 90px;
+    width: 100%;
+
+    background: #2b0750;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* =====================================
+   LEFT
+===================================== */
+
+.sound-header-left {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.menu-btn {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+  
+}
+
+.menu-btn:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.sound-logo img {
+    width: 160px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =====================================
+   SEARCH
+===================================== */
+
+.sound-search {
+    width: 430px;
+    height: 43px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    margin-left: 40px;
+}
+
+.sound-search input {
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+
+    color: white;
+
+    background: #222;
+}
+
+.sound-search input::placeholder {
+    color: #777;
+}
+
+.sound-search button {
+    width: 55px;
+    height: 100%;
+
+    border: none;
+
+    background: #5c00ce;
+color: white;
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.sound-search button:hover {
+    background: #9d59f1;
+}
+
+
+/* =====================================
+   RIGHT SIDE
+===================================== */
+
+.sound-header-right {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.signup-link {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+}
+
+.signup-link:hover {
+    color: #d6a5ff;
+}
+
+
+.login-btn {
+    text-decoration: none;
+
+    color: #222;
+
+    background: #fff;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #d8b4ff;
+}
+
+
+.notification-btn {
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.profile-circle {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.sound-sidebar {
+    position: fixed;
+
+    top: 90px;
+    left: -280px;
+
+    width: 270px;
+
+    height: calc(100vh - 90px);
+
+    background: #18052e;
+
+    z-index: 999;
+
+    padding: 15px 12px;
+
+    overflow-y: auto;
+
+    transition: 0.3s ease;
+
+    box-shadow: 5px 0 20px rgba(0,0,0,0.3);
+}
+
+
+/* OPEN */
+
+.sound-sidebar.show {
+    left: 0;
+}
+
+
+/* =====================================
+   SIDEBAR SECTION
+===================================== */
+
+.sidebar-section {
+    padding: 8px 0 14px;
+
+    margin-bottom: 8px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.sidebar-section h3 {
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    padding: 10px 14px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+/* =====================================
+   SIDEBAR LINKS
+===================================== */
+
+.sidebar-link {
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 0 15px;
+
+    margin: 3px 0;
+
+    border-radius: 9px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+.sidebar-link span {
+    width: 23px;
+
+    text-align: center;
+
+    font-size: 19px;
+}
+
+.sidebar-link p {
+    margin: 0;
+}
+
+
+/* HOVER */
+
+.sidebar-link:hover {
+    background: rgba(255,255,255,0.10);
+
+    color: #dca8ff;
+}
+
+
+/* ACTIVE */
+
+.sidebar-link.active {
+    background: rgba(255,255,255,0.13);
+
+    color: white;
+
+    font-weight: 600;
+}
+
+
+/* =====================================
+   OVERLAY
+===================================== */
+
+.sidebar-overlay {
+    position: fixed;
+
+    top: 90px;
+    left: 0;
+
+    width: 100%;
+    height: calc(100vh - 90px);
+
+    background: rgba(0,0,0,0.65);
+
+    z-index: 998;
+
+    display: none;
+}
+
+.sidebar-overlay.show {
+    display: block;
+}
+
+
+/* =====================================
+   SEARCH RESULTS
+===================================== */
+
+.sound-search-results {
+    position: fixed;
+
+    top: 140px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 430px;
+
+    max-height: 450px;
+
+    overflow-y: auto;
+
+    background: #18052e;
+
+    border-radius: 12px;
+
+    z-index: 1100;
+
+    display: none;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+
+/* SEARCH ITEM */
+
+.search-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 15px;
+
+    color: white;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.search-item:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.search-item img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+}
+
+.search-item h4 {
+    margin: 0 0 4px;
+
+    font-size: 14px;
+}
+
+.search-item p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #aaa;
+}
+
+
+/* =====================================
+   BODY SPACE
+===================================== */
+
+body {
+    padding-top: 90px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1100px) {
+
+    .sound-header {
+        padding: 0 30px;
+    }
+
+    .sound-search {
+        width: 350px;
+        margin-left: 20px;
+    }
+
+    .sound-logo img {
+        width: 140px;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .sound-search {
+        width: 40%;
+        margin-left: 10px;
+    }
+
+    .signup-link {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .sound-header {
+        padding: 0 15px;
+    }
+
+    .sound-logo img {
+        width: 120px;
+    }
+
+    .sound-search {
+        width: 45px;
+
+        border: none;
+
+        background: transparent;
+    }
+
+    .sound-search input {
+        display: none;
+    }
+
+    .sound-search button {
+        width: 45px;
+
+        background: transparent;
+
+        color: white;
+    }
+
+    .profile-circle {
+        display: none;
+    }
+
+    .login-btn {
+        padding: 8px 14px;
+    }
+
+    .sound-search-results {
+        width: 90%;
+    }
+}
+/* =========================
+   MENU BUTTON
+========================= */
+
+.menu-btn {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 10001;
+}
+
+.menu-btn:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sound-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: -290px;
+
+    width: 280px;
+    height: 100vh;
+
+    background: #18052e;
+
+    z-index: 10000;
+
+    padding: 25px 15px;
+
+    box-shadow: 5px 0 25px rgba(0,0,0,0.5);
+
+    transition: left 0.3s ease;
+
+    overflow-y: auto;
+}
+
+
+/* SIDEBAR OPEN */
+
+.sound-sidebar.show {
+    left: 0;
+}
+
+
+/* =========================
+   SIDEBAR LOGO
+========================= */
+
+.sidebar-logo {
+    padding: 10px 15px 25px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+    margin-bottom: 15px;
+}
+
+.sidebar-logo img {
+    width: 150px;
+}
+
+
+/* =========================
+   SIDEBAR LINKS
+========================= */
+
+.sidebar-menu a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    margin-bottom: 6px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    border-radius: 10px;
+
+    transition: 0.25s;
+}
+
+.sidebar-menu a:hover {
+    background: rgba(255,255,255,0.12);
+
+    color: #dca8ff;
+}
+
+.sidebar-menu a span:first-child {
+    width: 25px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.sidebar-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.65);
+
+    z-index: 9999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.sidebar-overlay.show {
+    opacity: 1;
+
+    visibility: visible;
+}
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

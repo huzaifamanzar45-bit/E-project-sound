@@ -1,45 +1,11 @@
 @extends('user.layout')
 @section('content')
-@php($site = \App\Models\SiteSetting::current())
-    <!-- Hero Section Begin -->
-    <section class="hero spad set-bg" data-setbg="users/img/hero-bg.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="hero__text">
-                        <span>{{ $site->hero_subtitle ?: 'New single' }}</span>
-                        <h1>{{ $site->hero_title ?: 'Feel the heart beats' }}</h1>
-                        <p>{{ $site->hero_description ?: 'Discover the latest music, artists, albums and videos.' }}</p>
-                        <a href="https://www.youtube.com/watch?v=K4DyBUG242c" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="linear__icon">
-            <i class="fa fa-angle-double-down"></i>
-        </div>
-    </section>
+   <!-- Hero Section Begin -->
+   <video class="hero-video" autoplay muted loop playsinline>
+    <source src="users/video/sound add.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
     <!-- Hero Section End -->
-
-    <!-- Dynamic New Additions -->
-    <section class="spad" style="background:#0b0b0b;">
-        <div class="container">
-            <div class="artists-header"><h2 class="text-white">New Additions</h2><a href="{{ route('media.index') }}" class="show-all">View all</a></div>
-            <div class="row">
-                @foreach($latestMusic as $item)
-                <div class="col-lg-3 col-md-6 mb-4"><div class="song-card" style="position:relative;"><span class="new-flash">NEW</span><a href="{{ route('media.show',$item) }}"><img src="{{ $item->thumbnail_url ?: asset('users/img/large-item.jpg') }}" style="width:100%;height:180px;object-fit:cover;"></a><h3 class="text-white mt-2">{{ $item->title }}</h3><p>{{ $item->artist }}</p></div></div>
-                @endforeach
-            </div>
-            <div class="artists-header mt-5"><h2 class="text-white">New Videos</h2><a href="{{ route('media.index',['type'=>'video']) }}" class="show-all">View all</a></div>
-            <div class="row">
-                @foreach($latestVideos as $item)
-                <div class="col-lg-3 col-md-6 mb-4"><div class="song-card" style="position:relative;"><span class="new-flash">NEW</span><a href="{{ route('media.show',$item) }}"><img src="{{ $item->thumbnail_url ?: asset('users/img/videos/videos-1.jpg') }}" style="width:100%;height:180px;object-fit:cover;"></a><h3 class="text-white mt-2">{{ $item->title }}</h3><p>{{ $item->artist }}</p></div></div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    <style>.new-flash{position:absolute;top:12px;left:12px;background:#ff2b2b;color:#fff;padding:4px 9px;border-radius:20px;font-size:11px;font-weight:700;z-index:2;animation:flashNew .8s infinite alternate}@keyframes flashNew{from{opacity:.35}to{opacity:1}}</style>
-
 
 
 
@@ -49,9 +15,6 @@
     <div class="artists-header">
         <h2 >Popular artists</h2>
 
-        <a href="" class="show-all">
-            Show all
-        </a>
     </div>
 
 
@@ -68,7 +31,7 @@
                   <img src="users/img/arijit singh.jpg" alt=""  class="artist-image">
 
                     <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+                       <a href="/playlist1"> <i class="fa-solid fa-play"></i></a>
                     </div>
 
                 </div>
@@ -91,7 +54,7 @@
 
                    <img src="users/img/shaan.jpg" alt="" class="artist-image">
                     <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+                       <a href="/playlist2"> <i class="fa-solid fa-play"></i></a>
                     </div>
 
                 </div>
@@ -119,7 +82,7 @@
                     >
 
                     <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+                        <a href="/playlist3"> <i class="fa-solid fa-play"></i></a>
                     </div>
 
                 </div>
@@ -147,7 +110,7 @@
                     >
 
                     <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+                         <a href="playlist4"> <i class="fa-solid fa-play"></i></a>
                     </div>
 
                 </div>
@@ -175,7 +138,7 @@
                     >
 
                     <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+                         <a href="playlist1"> <i class="fa-solid fa-play"></i></a>
                     </div>
 
                 </div>
@@ -203,7 +166,7 @@
                     >
 
                     <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+                        <a href="playlist1"> <i class="fa-solid fa-play"></i></a>
                     </div>
 
                 </div>
@@ -230,7 +193,7 @@
                     >
 
                     <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+                         <a href="playlist1"> <i class="fa-solid fa-play"></i></a>
                     </div>
 
                 </div>
@@ -257,7 +220,7 @@
                     >
 
                     <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+                         <a href="playlist1"> <i class="fa-solid fa-play"></i></a>
                     </div>
 
                 </div>
@@ -285,7 +248,7 @@
                     >
 
                     <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+                        <a href="playlist1"> <i class="fa-solid fa-play"></i></a>
                     </div>
 
                 </div>
@@ -313,7 +276,7 @@
                     >
 
                     <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+                        <a href="playlist1"> <i class="fa-solid fa-play"></i></a>
                     </div>
 
                 </div>
@@ -640,6 +603,134 @@
     
   <!-- album list end here -->
     
+   <!-- 90s list -->
+<div class="container">
+    <section class="recommended-section">
+
+    <div class="recommended-header">
+        <h2 class="hd text-light">90's Playlist</h2>
+
+        <div class="scroll-buttons">
+          
+  <a href="/90splay">Show all</a>
+           
+        </div>
+    </div>
+
+
+    <div class="song-cards" id="songCards">
+
+        <!-- Card 1 -->
+        <div class="song-card">
+            <div class="song-image-box">
+                <img src="users/img/kali kali ankhe.jpg" alt="">
+                <button class="play-btn">▶</button>
+            </div>
+
+            <h3>Yeh Kaali Kaali Aankhen</h3>
+            <p>Kumar Sanu and Anu Malik</p>
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="song-card">
+            <div class="song-image-box">
+               <img src="users/img/phele nasha.jpg" alt="">
+                <button class="play-btn">▶</button>
+            </div>
+
+            <h3>Pehla Nasha</h3>
+            <p> Udit Narayan and Sadhana Sargam</p>
+        </div>
+
+
+          <!-- Extra Card -->
+        <div class="song-card">
+            <div class="song-image-box">
+                <img src="users/img/jaadu teri nazar.jpg" alt="">
+                <button class="play-btn">▶</button>
+            </div>
+
+            <h3> Jaadu Teri Nazar</h3>
+            <p>Udit Narayan</p>
+        </div>
+
+          <!-- Extra Card -->
+        <div class="song-card">
+            <div class="song-image-box">
+                <img src="users/img/tujhe dekha.jpg" alt="">
+                <button class="play-btn">▶</button>
+            </div>
+
+            <h3>Tujhe Dekha To</h3>
+            <p> Kumar Sanu and Lata Mangeshkar</p>
+        </div>
+
+
+        <!-- Card 3 -->
+        <div class="song-card">
+            <div class="song-image-box">
+                <img src="users/img/tan tana.jpg" alt="">
+                <button class="play-btn">▶</button>
+            </div>
+
+            <h3>Tan Tana Tan</h3>
+            <p>Abhijeet Bhattacharya and Poornima</p>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="song-card">
+            <div class="song-image-box">
+               <img src="users/img/oo jane jana.jpg" alt="">
+                <button class="play-btn">▶</button>
+            </div>
+
+            <h3> O O Jaane Jaana  </h3>
+            <p>Kamaal Khan </p>
+        </div>
+
+
+        <!-- Extra Card -->
+        <div class="song-card">
+            <div class="song-image-box">
+               <img src="users/img/chaiya.jpg" alt="">
+                <button class="play-btn">▶</button>
+            </div>
+
+            <h3>Chaiyya Chaiyya</h3>
+            <p> Sukhwinder Singh & Sapna Awasthi </p>
+        </div>
+
+          <!-- Extra Card -->
+        <div class="song-card">
+            <div class="song-image-box">
+               <img src="users/img/humko hamai se.jpg" alt="">
+                <button class="play-btn">▶</button>
+            </div>
+
+            <h3>Humko Humise Chura Lo</h3>
+            <p>Lata Mangeshkar and Udit Narayan</p>
+        </div>
+
+          <!-- Extra Card -->
+        <div class="song-card">
+            <div class="song-image-box">
+               <img src="users/img/bht pyar krtee.jpg" alt="">
+                <button class="play-btn">▶</button>
+            </div>
+
+            <h3>Bahut Pyar Karte Hain</h3>
+            <p> by Anuradha Paudwal </p>
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+    
+  <!-- 90s list end here -->
 
     <!-- Services Section Begin -->
     <section class="services">

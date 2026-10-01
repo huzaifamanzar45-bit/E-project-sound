@@ -34,12 +34,30 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/index', [HomeController::class, 'index'])->name('home');
     Route::get('/media', [MediaBrowseController::class, 'index'])->name('media.index');
     Route::get('/media/{media}', [MediaBrowseController::class, 'show'])->name('media.show');
-
+ 
     Route::get('/ostlist', function () { return view('user.showallost'); });
     Route::get('/about', function () { return view('user.about'); });
     Route::get('/contact', function () { return view('user.contact'); });
     Route::get('/blogs', function () { return view('user.blog'); });
     Route::get('/albumlist', function () { return view('user.albumlist'); });
+
+
+Route::get('/playlist2', function () {
+    return view('user.shaanplaylist');
+});
+Route::get('/playlist1', function () {
+    return view('user.arijitplaylist');
+});
+Route::get('/90splay', function () {
+    return view('user.90splaylist');
+});
+Route::get('/playlist3', function () {
+    return view('user.atifplaylist');
+});
+Route::get('/playlist4', function () {
+    return view('user.aliplaylist');
+});
+
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
