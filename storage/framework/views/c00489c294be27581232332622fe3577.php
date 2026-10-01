@@ -70,4 +70,4 @@ unset($__sessionArgs); ?>
 <?php $component = $__componentOriginal69dc84650370d1d4dc1b42d016d7226b; ?>
 <?php unset($__componentOriginal69dc84650370d1d4dc1b42d016d7226b); ?>
 <?php endif; ?>
-<?php /**PATH C:\Users\LAPVY\Downloads\E-Project-Sound\resources\views/auth/login.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\Users\LAPVY\Desktop\E-project-sound\resources\views/auth/login.blade.php ENDPATH**/ ?>

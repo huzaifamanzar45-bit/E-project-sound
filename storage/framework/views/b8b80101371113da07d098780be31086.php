@@ -41,4 +41,4 @@
     <footer class="bottom">SOUND &nbsp;•&nbsp; PLAY &nbsp;•&nbsp; STREAM &nbsp;•&nbsp; FEEL</footer>
 </body>
 </html>
-<?php /**PATH C:\Users\LAPVY\Downloads\E-Project-Sound\resources\views/auth/landing.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\Users\LAPVY\Desktop\E-project-sound\resources\views/auth/landing.blade.php ENDPATH**/ ?>
