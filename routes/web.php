@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\WebsiteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MediaBrowseController;
+use App\Http\Controllers\admincontroller;
 
 Route::get('/', function () {
     if (auth()->check()) {
@@ -42,6 +43,20 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/albumlist', function () { return view('user.albumlist'); });
 
 
+
+
+    Route::post('/submit',[admincontroller::class,('datatransfer')]);
+
+   Route::get('/submit',[admincontroller::class,('showusers')]);
+
+   Route::get('/songupload',[admincontroller::class,('uploadsong')]);
+
+    //  Route::get('/songupload',[admincontroller::class,('')]);
+   
+Route::get('/songupload', function () {
+    return view('user.song');
+});
+    
 Route::get('/playlist2', function () {
     return view('user.shaanplaylist');
 });

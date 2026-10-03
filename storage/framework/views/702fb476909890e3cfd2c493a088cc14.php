@@ -54,8 +54,8 @@
     <div class="sidebar-menu">
 
         <a href="/index">
-            <span>🏠</span>
-            <span>Home</span>
+<i class="fa-solid fa-house"></i>            
+<span>Home</span>
         </a>
 
         <a href="/about">

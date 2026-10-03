@@ -37,13 +37,29 @@
                         </div>
                         <p>Have a question, song request, or feedback? We'd love to hear from you. Connect with the BEATX team and 
                             we'll get back to you as soon as possible. </p>
-                        <form action="#">
+                        <form action="/submit" method="post">
+                            <?php echo csrf_field(); ?>
+                            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(isset($message)): ?>
+
+                            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <img src="..." class="rounded me-2" alt="...">
+    <strong class="me-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+   <?php echo e($message); ?>
+
+  </div>
+</div>
+                            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                             <div class="input__list">
-                                <input type="text" placeholder="Name">
-                                <input type="text" placeholder="Email">
-                                <input type="text" placeholder="Reason For Contact">
+                                <input type="text" name="username" placeholder="Name">
+                                <input type="text" name="useremail"  placeholder="Email">
+                                <input type="text" name="userreason"  placeholder="Reason For Contact">
                             </div>
-                            <textarea placeholder="Comment"></textarea>
+                            <textarea name="comment"  placeholder="Comment"></textarea>
                             <button type="submit" class="site-btn">SEND MESSAGE</button>
                         </form>
                     </div>
@@ -52,5 +68,7 @@
         </div>
     </section>
     <!-- Contact Section End -->
+
+    
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('user.layout', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\123\OneDrive\Desktop\E-project-sound\resources\views/user/contact.blade.php ENDPATH**/ ?>

@@ -1,3 +1,4 @@
+
 @extends('user.layout')
 @section('content')
     
@@ -38,13 +39,28 @@
                         </div>
                         <p>Have a question, song request, or feedback? We'd love to hear from you. Connect with the BEATX team and 
                             we'll get back to you as soon as possible. </p>
-                        <form action="#">
+                        <form action="/submit" method="post">
+                            @csrf
+                            @if(isset($message))
+
+                            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <img src="..." class="rounded me-2" alt="...">
+    <strong class="me-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+   {{$message}}
+  </div>
+</div>
+                            @endif
                             <div class="input__list">
-                                <input type="text" placeholder="Name">
-                                <input type="text" placeholder="Email">
-                                <input type="text" placeholder="Reason For Contact">
+                                <input type="text" name="username" placeholder="Name">
+                                <input type="text" name="useremail"  placeholder="Email">
+                                <input type="text" name="userreason"  placeholder="Reason For Contact">
                             </div>
-                            <textarea placeholder="Comment"></textarea>
+                            <textarea name="comment"  placeholder="Comment"></textarea>
                             <button type="submit" class="site-btn">SEND MESSAGE</button>
                         </form>
                     </div>
@@ -53,4 +69,6 @@
         </div>
     </section>
     <!-- Contact Section End -->
+
+    
 @endsection
