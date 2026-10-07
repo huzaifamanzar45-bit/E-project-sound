@@ -1,6 +1,4 @@
-
-@extends('user.layout')
-@section('content')
+<?php $__env->startSection('content'); ?>
     
    <!-- Contact Section Begin -->
     <section class="contact spad">
@@ -40,21 +38,22 @@
                         <p>Have a question, song request, or feedback? We'd love to hear from you. Connect with the BEATX team and 
                             we'll get back to you as soon as possible. </p>
                         <form action="/submit" method="post">
-                            @csrf
-                           @if(isset($message))
+                            <?php echo csrf_field(); ?>
+                           <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(isset($message)): ?>
     <div class="toast-container position-fixed top-20 end-0 p-3 ">
-        <div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header ">
+        <div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true bg-primary">
+            <div class="toast-header">
                 <strong class="me-auto">Success</strong>
                 
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                {{ $message }}
+                <?php echo e($message); ?>
+
             </div>
         </div>
     </div>
-@endif
+<?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                             <div class="input__list">
                                 <input type="text" name="username" placeholder="Name">
                                 <input type="text" name="useremail"  placeholder="Email">
@@ -70,4 +69,5 @@
     </section>
     <!-- Contact Section End -->
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('user.layout', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\123\OneDrive\Desktop\final-sound\resources\views/user/contact.blade.php ENDPATH**/ ?>

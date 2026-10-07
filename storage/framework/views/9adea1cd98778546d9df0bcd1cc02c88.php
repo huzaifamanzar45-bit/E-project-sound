@@ -49,7 +49,7 @@
 <aside class="sound-sidebar" id="soundSidebar">
 
     <div class="sidebar-logo">
-        <img src="{{ asset('users/img/weblogo.png') }}" alt="SOUND">
+        <img src="<?php echo e(asset('users/img/weblogo.png')); ?>" alt="SOUND">
     </div>
 
     <div class="sidebar-menu">
@@ -89,7 +89,7 @@
 
         <div class="sound-logo">
             <a href="/index">
-                <img src="{{ asset('users/img/weblogo.png') }}" alt="SOUND">
+                <img src="<?php echo e(asset('users/img/weblogo.png')); ?>" alt="SOUND">
             </a>
         </div>
 
@@ -246,7 +246,7 @@
 <div class="sound-search-results" id="searchResults"></div>
     <!-- Header Section End -->
 
-@yield('content')
+<?php echo $__env->yieldContent('content'); ?>
 
 
      <!-- Footer Section Begin -->
@@ -360,7 +360,7 @@ sidebarOverlay.addEventListener("click", function () {
 });
 </script>
 
-@section('scripts')
+<?php $__env->startSection('scripts'); ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
@@ -371,8 +371,8 @@ sidebarOverlay.addEventListener("click", function () {
         }
     });
 </script>    
-@endsection
+<?php $__env->stopSection(); ?>
 
 </body>
 
-</html>
+</html><?php /**PATH C:\Users\123\OneDrive\Desktop\final-sound\resources\views/user/layout.blade.php ENDPATH**/ ?>

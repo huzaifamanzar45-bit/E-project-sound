@@ -1,5 +1,4 @@
-@extends('user.layout')
-@section('content')
+<?php $__env->startSection('content'); ?>
    <!-- Hero Section Begin -->
    <video class="hero-video" autoplay muted loop playsinline>
     <source src="users/video/sound add.mp4" type="video/mp4">
@@ -779,4 +778,5 @@
     <!-- Services Section End -->
 
  
-   @endsection
+   <?php $__env->stopSection(); ?>
+<?php echo $__env->make('user.layout', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\123\OneDrive\Desktop\final-sound\resources\views/user/index.blade.php ENDPATH**/ ?>

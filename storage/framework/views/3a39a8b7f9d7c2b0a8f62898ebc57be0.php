@@ -459,7 +459,7 @@
                         <hr>
                         <hr>
                         <p>Music is more than just sound — it’s a feeling, a memory, and <br> sometimes the perfect escape from a stressful day.</p>
-                        <a href="#" class="primary-btn">CONTACT us</a>
+                        <a href="/contact" class="primary-btn">CONTACT us</a>
                     </div>
                 </div>
             </div>

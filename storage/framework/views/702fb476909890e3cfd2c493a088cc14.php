@@ -7,7 +7,7 @@
     <meta name="keywords" content="DJoz, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DJoz | Template</title>
+    <title>Sound</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -59,22 +59,22 @@
         </a>
 
         <a href="/about">
-            <span>ℹ️</span>
+           <i class="fa-solid fa-circle-info"></i>
             <span>About</span>
         </a>
 
         <a href="/videos">
-            <span>▶️</span>
+           <i class="fa-solid fa-circle-play"></i>
             <span>Videos</span>
         </a>
 
         <a href="/blogs">
-            <span>📝</span>
+          <i class="fa-brands fa-blogger"></i>
             <span>Blog</span>
         </a>
 
         <a href="/contact">
-            <span>✉️</span>
+           <i class="fa-solid fa-address-book"></i>
             <span>Contact</span>
         </a>
 

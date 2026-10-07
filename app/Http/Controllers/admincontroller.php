@@ -17,9 +17,10 @@ class admincontroller extends Controller
      $user->save();
      $message = "Form has been submitted";
      
-return view('user.contact', compact('message'));
+ return redirect()->back()->with('message', 'Form has been submitted');
 
     }
+    
 
 public function showusers(){
     $users = new Contactdetail();
@@ -38,6 +39,7 @@ public function uploadsong(Request $req){
       return view('user.songupload');
 
 }
+
 
 
     //
